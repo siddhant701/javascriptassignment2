@@ -1,14 +1,24 @@
 var count = 0;
 var countButton = document.getElementById("countButton");
 var displayCount = document.getElementById("displayCount");
-countButton.onclick = function(){
-  count++;
-  displayCount.innerHTML = count;
+// countButton.onclick = function(){
+//   console.log(this)
+//   count++;
+//   displayCount.innerHTML = count;
+// }
+
+var images = document.getElementsByClassName("button")
+for(var i =0; i < images.length ; i++){
+  images[i].onclick = increment;
 }
-var countt = 0;
-var counttButton = document.getElementById("counttButton");
-var displayyCount = document.getElementById("displayyCount");
-counttButton.onclick = function(){
-  countt++;
-  displayyCount.innerHTML = countt;
+function increment(event){
+  var value = event.target.value
+  value++
+  console.log(this.id , 'has value',value)
+  event.target.value = value
+  event.target.nextElementSibling.innerText = ` this was clicked ${value} times.`
+
+
 }
+
+

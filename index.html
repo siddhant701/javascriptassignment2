@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang='en'>
+
   <head>
     <meta charset='UTF-8'/>
     <link rel='stylesheet' href='index.css'>
   </head>
+  <script src="index.js"></script>
 <body>
 <div>
  
-    <input type="image" src="images.jpg" value="CLICK HERE" id="countButton" />
-    was pressed - <span id="displayCount">0</span> - times. 
+    <input class='button' type="image" src="images.jpg" value="10" id="button1" onclick="increment(event)" />
+    <span id="displayCount"></span>
+  
     
-    <input type="image" src="sky.jpg" value="CLICK HERE" id="counttButton" />
-    was pressed - <span id="displayyCount">0</span> - times. 
-    <script src="index.js"></script>
+</div>
+<div>
+ 
+  <input class='button' type="image" src="sky.jpg" value="01" id="button2" onclick="increment(event)" />
+  <span id="displayCount"></span>
+
+
 </div>
 
 </body> 
